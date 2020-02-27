@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybaits.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.wandongli.rye.dao.CourseDao">
+    <resultMap id="CourseResult" type="Course">
+        <id property="id" column="id"></id>
+        <result property="adminId" column="admin_id"></result>
+        <result property="sectionId" column="section_id"></result>
+        <result property="title" column="title"></result>
+        <result property="priority" column="priority"></result>
+        <result property="type" column="type" typeHandler="edu.wandongli.rye.typehandler.TypeHandler"></result>
+        <result property="ifStatus" column="if_status"
+                typeHandler="edu.wandongli.rye.typehandler.IfStatusTypeHandler"></result>
+        <result property="digest" column="digest"></result>
+        <result property="cover" column="cover"></result>
+        <result property="createTime" column="create_time"></result>
+        <result property="updateTime" column="update_time"></result>
+        <association property="admin" column="admin_id"
+                     select="edu.wandongli.rye.dao.AdminDao.findAdminById"></association>
+        <association property="section" column="section_id"
+                     select="edu.wandongli.rye.dao.SectionDao.findSectionById"></association>
+        <!-- <collection property="courseCatalogs" column="id" select="edu.wandongli.rye.dao.CourseCatalogDao.getListById"></collection>-->
+    </resultMap>
+    <select id="getList" resultMap="CourseResult" parameterType="string">
+        select * from course
+        <where>
+            <if test="title!=null and title!=''">
+                and title like concat('%',#{title},'%')
+            </if>
+            <if test="sectionId!=null">
+                and section_id like concat('%',#{sectionId},'%')
+            </if>
+        </where>
+        order by priority desc
+    </select>
+</mapper>

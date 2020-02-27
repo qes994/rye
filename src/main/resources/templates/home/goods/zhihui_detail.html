@@ -1,0 +1,625 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: #ffffff;
+        }
+
+        .icon-7 {
+            color: #ffffff;
+            font-size: 0.17rem;
+        }
+
+        .vedio, .vedio img {
+            width: 100%;
+            height: 2.11rem;
+        }
+
+        .ul_tab {
+            width: 100%;
+            padding: 0.15rem 0.3rem 0 0.3rem;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #DDDDDD;
+        }
+
+        .ul_tab li {
+            width: 33.33333333%;
+            text-align: center;
+            color: #666666;
+            float: left;
+        }
+
+        .ul_tab li.active {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        .border {
+            width: 0.21rem;
+            height: 0.01rem;
+            background: #01C475;
+            margin: 0 auto;
+            margin-top: 0.1rem;
+            display: none;
+        }
+
+        .ul_tab li.active .border {
+            display: block;
+        }
+
+        /*简介内容*/
+        .jianjie img {
+            width: 100%;
+        }
+
+        .ul_cen {
+            padding: 0.14rem;
+        }
+
+        /*目录*/
+        .twlist {
+            margin: 0.05rem 0 0.2rem 0;
+        }
+
+        .twlist.active .twtit {
+            color: #01C475;
+        }
+
+        .twtit {
+            color: #111111;
+        }
+
+        .mian {
+            width: 0.6rem;
+            height: 0.25rem;
+            line-height: 0.25rem;
+            color: #ffffff;
+            text-align: center;
+            font-weight: bold;
+            background: #01C475;
+            border-radius: 0.03rem;
+        }
+
+        .time span:nth-child(1) {
+            margin-right: 0.15rem;
+        }
+
+        .time span.iconfont {
+            color: #FFAA01;
+            font-size: 0.13rem;
+        }
+
+        .icon-suo {
+            font-size: 0.25rem;
+        }
+
+        .wzcen {
+            background: #F5F5F5;
+            border-radius: 0.02rem;
+            padding: 0.14rem 0;
+        }
+
+        .wztit {
+            font-size: 0.16rem;
+            color: #111111;
+            text-align: center;
+            padding: 0 0.14rem;
+        }
+
+        .wzimg img {
+            width: 100%;
+        }
+
+        .wzmain {
+            margin: 0.1rem 0;
+            padding: 0 0.14rem;
+        }
+
+        /*底部*/
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background: #ffffff;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .textword {
+            width: 2.19rem;
+            line-height: 0.26rem;
+            border: 0.01rem solid #FFFFFF;
+            overflow: scroll;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            max-height: 1rem;
+            padding: 0;
+            border-radius: 0.05rem;
+            margin-bottom: 0;
+            font-size: 0.14rem;
+            background: #F5F5F9;
+            resize: none;
+            float: left;
+            margin-left: 0.14rem;
+            padding-left: 0.1rem;
+            margin-top: 0.08rem;
+            margin-bottom: 0.08rem;
+        }
+
+        .icodiv {
+            width: 0.45rem;
+            line-height: 0.14rem;
+            font-size: 0.1rem;
+            color: #5C5C5C;
+            text-align: center;
+            padding-top: 0.05rem;
+        }
+
+        .icodiv .iconfont {
+            font-size: 0.17rem;
+            line-height: 0.17rem;
+            color: #AAAAAA;
+        }
+
+        .shoucang .iconfont {
+            font-size: 0.15rem;
+        }
+
+        .icodiv .icon-zan {
+            color: #01C475;
+        }
+
+        .icodiv .icon-collection-b {
+            color: #FFAA01;
+        }
+
+        .fasong {
+            width: 0.6rem;
+            height: 0.24rem;
+            line-height: 0.24rem;
+            background: #01C475;
+            border-radius: 0.03rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            display: none;
+            margin-top: 0.08rem;
+            margin-left: 0.15rem;
+        }
+
+        /*悬浮*/
+        .xuanfu {
+            width: 3.47rem;
+            height: 0.52rem;
+            position: fixed;
+            bottom: 0.76rem;
+            left: 0.14rem;
+        }
+
+        .xuanfu img {
+            width: 3.47rem;
+            height: 0.52rem;
+        }
+
+        .share {
+            width: 100%;
+            position: fixed;
+            bottom: -5rem;
+            padding: 0.3rem 0.14rem;
+            background: #fff;
+            z-index: 56;
+        }
+
+        .shcen {
+            width: 50%;
+            text-align: center;
+        }
+
+        .shcen img {
+            width: 0.44rem;
+        }
+
+        .shtit {
+            line-height: 0.16rem;
+            padding-left: 0.15rem;
+            border-left: 0.02rem solid #01C475;
+            margin-bottom: 0.4rem;
+        }
+
+        .icon-guanbi {
+            font-size: 0.16rem;
+            color: #333333;
+            position: absolute;
+            top: 0.15rem;
+            right: 0.14rem;
+        }
+
+        /*支付弹窗*/
+        .zhifu {
+            width: 100%;
+            background: #fff;
+            position: fixed;
+            bottom: -4rem;
+            padding-top: 0.2rem;
+            z-index: 56;
+        }
+
+        .zhifu > h4 {
+            font-size: 0.24rem;
+            color: #FF3213;
+            text-align: center;
+            margin: 0;
+        }
+
+        .zhifu p {
+            color: #333333;
+            text-align: center;
+            margin-bottom: 0;
+            margin-top: 0.05rem;
+        }
+
+        .zflist {
+            padding: 0.25rem 0.14rem;
+            margin-bottom: 0.2rem;
+        }
+
+        .zf-lf {
+            margin-right: 0.1rem;
+        }
+
+        .zf-lf img {
+            width: 0.45rem;
+            height: 0.45rem;
+        }
+
+        .zf-rg h4 {
+            color: #333;
+            font-size: 0.14rem;
+        }
+
+        .zf-rg p {
+            color: #999;
+            font-size: 0.12rem;
+        }
+
+        .xuanzhong:checked {
+            background: #42DF7E;
+            border: 0;
+        }
+
+        .xuanzhong {
+            width: 0.2rem;
+            height: 0.2rem;
+            border: 0.01rem solid #42DF7E;
+            -webkit-border-radius: 50%;
+            border-radius: 50%;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: default;
+            -webkit-appearance: none;
+            -webkit-user-select: none;
+            user-select: none;
+            -webkit-transition: background-color ease 0.1s;
+            transition: background-color ease 0.1s;
+            margin: 0;
+        }
+
+        .xuanzhong:checked::after {
+            content: '';
+            top: 0.05rem;
+            left: 0.05rem;
+            position: absolute;
+            background: transparent;
+            border: #fff solid 0.01rem;
+            border-top: none;
+            border-right: none;
+            height: 0.05rem;
+            width: 0.09rem;
+            -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+
+        .zf-put {
+            margin-top: 0.1rem;
+        }
+
+        .zfbtn {
+            width: 3.47rem;
+            height: 0.44rem;
+            line-height: 0.44rem;
+            text-align: center;
+            background: linear-gradient(-56deg, rgba(10, 209, 128, 1), rgba(1, 196, 117, 1));
+            box-shadow: 0px 4px 5px 0px rgba(1, 196, 117, 0.22);
+            border-radius: 0.05rem;
+            margin: 0 auto;
+            margin-top: 0.55rem;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 0.18rem;
+            margin-bottom: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav">
+        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+        <h1 class="mui-title">详情</h1>
+        <span class="icon iconfont icon-7 mui-pull-right fenxiang"></span>
+    </header>
+    <div class="main">
+        <div class="vedio">
+            <img src="../../image/vedio.png"/>
+        </div>
+        <ul class="ul_tab clearfloat font16">
+            <li class="active">
+                <div class="hdtit">简介</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">目录</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">图文</div>
+                <div class="border"></div>
+            </li>
+        </ul>
+        <ul class="ul_cen">
+            <li style="display: none;">
+                <div class="jianjie">
+                    <img src="../../image/jianjie.png"/>
+                </div>
+            </li>
+            <li style="display: none;">
+                <div class="tuwen">
+                    <div class="twlist">
+                        <div class="fle fle_b">
+                            <div class="twtit">1.开门店还是搞电商，你清楚吗？</div>
+                            <div class="mian">免费</div>
+                        </div>
+                        <div class="time font12 cor9">
+                            <span>2019-05-22</span>
+                            <span class="icon iconfont icon-icon-test"></span>
+                            <span>3.5万人学习</span>
+                        </div>
+                    </div>
+
+                    <div class="twlist">
+                        <div class="fle fle_b">
+                            <div class="twtit">2.开门店还是搞电商，你清楚吗？</div>
+                            <div class="mian">免费</div>
+                        </div>
+                        <div class="time font12 cor9">
+                            <span>2019-05-22</span>
+                            <span class="icon iconfont icon-icon-test"></span>
+                            <span>3.5万人学习</span>
+                        </div>
+                    </div>
+
+                    <div class="twlist active">
+                        <div class="fle fle_b">
+                            <div class="twtit">3.开门店还是搞电商，你清楚吗？</div>
+                            <div class="mian">免费</div>
+                        </div>
+                        <div class="time font12 cor9">
+                            <span>2019-05-22</span>
+                            <span class="icon iconfont icon-icon-test"></span>
+                            <span>3.5万人学习</span>
+                        </div>
+                    </div>
+
+                    <div class="twlist shoufei">
+                        <div class="fle fle_b">
+                            <div class="twtit">3.开门店还是搞电商，你清楚吗？</div>
+                            <div class="icon iconfont icon-suo"></div>
+                        </div>
+                        <div class="time font12 cor9">
+                            <span>2019-05-22</span>
+                            <span>3.5万人学习</span>
+                        </div>
+                    </div>
+
+                    <div class="twlist shoufei">
+                        <div class="fle fle_b">
+                            <div class="twtit">3.开门店还是搞电商，你清楚吗？</div>
+                            <div class="icon iconfont icon-suo"></div>
+                        </div>
+                        <div class="time font12 cor9">
+                            <span>2019-05-22</span>
+                            <span>3.5万人学习</span>
+                        </div>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+                <div class="wzcen">
+                    <div class="wztit">拥有自己的一家店铺</div>
+                    <div class="wzmain cor9">成功的永远比失败的少，那就是因为那些成功者都有敏锐的眼光，能看到别人看？</div>
+                    <div class="wzimg">
+                        <img src="../../image/tuwen.png"/>
+                    </div>
+                    <div class="wzmain cor9">成功的永远比失败的少，那就是因为那些成功者都有敏锐的眼光，能看到别人看？</div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="footer fle">
+        <div class="shuru">
+					<textarea rows=1 cols=40 class="textword" placeholder="写点感想吧..." style=''
+                              onfocus="window.activeobj=this;this.clock=setInterval(function(){activeobj.style.height=activeobj.scrollHeight+'px';},20);"
+                              onblur="clearInterval(this.clock);"></textarea>
+        </div>
+        <div class="icodiv">
+            <div class="icon iconfont icon-pinglun"></div>
+            <div>162</div>
+        </div>
+        <div class="icodiv dianzan">
+            <div class="icon iconfont icon-zan1"></div>
+            <div>185</div>
+        </div>
+        <div class="icodiv shoucang">
+            <div class="icon iconfont icon-collection"></div>
+            <div>收藏</div>
+        </div>
+
+        <div class="fasong">发送</div>
+    </div>
+
+    <div class="xuanfu">
+        <img src="../../image/fc1.png"/>
+    </div>
+
+    <div class="bg_rgba"></div>
+    <div class="share">
+        <div class="shtit font16 cor6">分享到：</div>
+        <div class="fle">
+            <div class="shcen">
+                <img src="../../image/wx.png"/>
+                <div class="font12 cor9">微信好友</div>
+            </div>
+            <div class="shcen">
+                <img src="../../image/pyq.png"/>
+                <div class="font12 cor9">微信朋友圈</div>
+            </div>
+        </div>
+
+        <div class="icon iconfont icon-guanbi"></div>
+    </div>
+
+
+    <div class="zhifu">
+        <h4>￥365</h4>
+        <p>家庭教育365天VIP会员</p>
+        <div class="zflist">
+            <label>
+                <div class="fl zf-lf">
+                    <img src="../../image/zf2.png"/>
+                </div>
+                <div class="fl zf-rg">
+                    <h4>支付宝支付</h4>
+                    <p>推荐已安装微信的用户使用</p>
+                </div>
+                <div class="fr zf-put">
+                    <input type="radio" name="check" class="xuanzhong" checked="checked"/>
+                </div>
+            </label>
+        </div>
+
+        <div class="zflist">
+            <label>
+                <div class="fl zf-lf">
+                    <img src="../../image/zf3.png"/>
+                </div>
+                <div class="fl zf-rg">
+                    <h4>微信支付</h4>
+                    <p>推荐已安装微信的用户使用</p>
+                </div>
+                <div class="fr zf-put">
+                    <input type="radio" name="check" class="xuanzhong"/>
+                </div>
+            </label>
+        </div>
+        <div class="zfbtn">支付</div>
+        <div class="icon iconfont icon-guanbi"></div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    $('.ul_tab').on('click', 'li', function () {
+        $('.ul_tab li').removeClass('active');
+        $(this).addClass('active');
+        var index = $(this).index();
+        $('.ul_cen li').hide();
+        $('.ul_cen li').eq(index).show();
+    })
+
+    /*输入内容时候*/
+    $('.textword').focus(function () {
+        $('.fasong').show();
+        $('.icodiv').hide();
+        $(this).css('width', '2.72rem');
+    })
+
+    $('.textword').blur(function () {
+        $('.fasong').hide();
+        $('.icodiv').show();
+    })
+
+    /*点赞*/
+    var state1 = false;
+    $('.dianzan').click(function () {
+        state1 = !state1;
+        if (state1) {
+            $(this).find('.iconfont').removeClass('icon-zan1');
+            $(this).find('.iconfont').addClass('icon-zan');
+        } else {
+            $(this).find('.iconfont').addClass('icon-zan1');
+            $(this).find('.iconfont').removeClass('icon-zan');
+        }
+    })
+    /*收藏*/
+    var state2 = false;
+    $('.shoucang').click(function () {
+        state2 = !state2;
+        if (state2) {
+            $(this).find('.iconfont').removeClass('icon-collection');
+            $(this).find('.iconfont').addClass('icon-collection-b');
+        } else {
+            $(this).find('.iconfont').addClass('icon-collection');
+            $(this).find('.iconfont').removeClass('icon-collection-b');
+        }
+    })
+
+    /*分享*/
+    $('.fenxiang').click(function () {
+        $('.share').animate({
+            bottom: '0',
+        })
+        $('.bg_rgba').fadeIn();
+    })
+    /*关闭*/
+    $('.icon-guanbi').click(function () {
+        $('.share').animate({
+            bottom: '-5rem',
+        })
+        $('.zhifu').animate({
+            bottom: '-4rem'
+        })
+        $('.bg_rgba').fadeOut();
+    })
+
+    /*支付*/
+    $('.shoufei').click(function () {
+        $('.zhifu').animate({
+            bottom: '0'
+        })
+        $('.bg_rgba').fadeIn();
+    })
+    $('.bg_rgba').click(function () {
+        $('.zhifu').animate({
+            bottom: '-4rem'
+        })
+        $('.bg_rgba').fadeOut();
+    })
+</script>
+</html>

@@ -1,0 +1,278 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: #ffffff;
+        }
+
+        .mui-pull-right {
+            color: #ffffff;
+        }
+
+        .ul_tab {
+            width: 100%;
+            padding: 0.15rem 0 0 0;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #DDDDDD;
+            margin-top: 0.44rem;
+            white-space: nowrap;
+            overflow-x: scroll;
+        }
+
+        .ul_tab::-webkit-scrollbar {
+            display: none;
+        }
+
+        .ul_tab li {
+            width: 24.5%;
+            text-align: center;
+            color: #666666;
+            display: inline-block;
+        }
+
+        .ul_tab li.active {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        .border {
+            width: 0.21rem;
+            height: 0.01rem;
+            background: #01C475;
+            margin: 0 auto;
+            margin-top: 0.1rem;
+            display: none;
+        }
+
+        .ul_tab li.active .border {
+            display: block;
+        }
+
+        .main {
+            margin-top: 0;
+        }
+
+        .vedio, .vedio img {
+            width: 100%;
+            height: 2.07rem;
+        }
+
+        /*目录*/
+        .mulu {
+
+        }
+
+        .mltit {
+            color: #01C475;
+            padding: 0.1rem 0.14rem;
+            border-bottom: 1px solid #DDDDDD;
+        }
+
+        .mlcen {
+            padding: 0 0.14rem;
+        }
+
+        .lvlist {
+            margin-top: 0.18rem;
+        }
+
+        .lvlist div:nth-child(1) {
+            color: #111111;
+            margin-bottom: 0.05rem;
+        }
+
+        .lvlist.active div:nth-child(1) {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        /*底部*/
+        .footer {
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            background: #ffffff;
+            border-top: 1px solid #eeeeee;
+        }
+
+        .textword {
+            width: 2.63rem;
+            height: 0.32rem;
+            line-height: 0.26rem;
+            border: 0.01rem solid #FFFFFF;
+            overflow: scroll;
+            overflow-y: hidden;
+            overflow-x: hidden;
+            max-height: 1rem;
+            padding: 0;
+            border-radius: 0.05rem;
+            margin-bottom: 0;
+            font-size: 0.14rem;
+            background: #F5F5F9;
+            resize: none;
+            float: left;
+            margin-left: 0.14rem;
+            padding: 0.03rem 0 0.03rem 0.1rem;
+            margin-top: 0.08rem;
+            margin-bottom: 0.08rem;
+        }
+
+        .icodiv {
+            width: 0.45rem;
+            line-height: 0.14rem;
+            font-size: 0.1rem;
+            color: #5C5C5C;
+            text-align: center;
+            padding-top: 0.05rem;
+        }
+
+        .icodiv .iconfont {
+            font-size: 0.17rem;
+            line-height: 0.17rem;
+            color: #AAAAAA;
+        }
+
+        .shoucang .iconfont {
+            font-size: 0.15rem;
+        }
+
+        .icodiv .icon-zan {
+            color: #01C475;
+        }
+
+        .icodiv .icon-collection-b {
+            color: #FFAA01;
+        }
+
+        .fasong {
+            width: 0.6rem;
+            height: 0.3rem;
+            line-height: 0.3rem;
+            background: #01C475;
+            border-radius: 0.03rem;
+            font-weight: bold;
+            color: #ffffff;
+            text-align: center;
+            display: none;
+            margin-top: 0.08rem;
+            margin-left: 0.15rem;
+        }
+    </style>
+
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav">
+        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+        <h1 class="mui-title">一起创业</h1>
+    </header>
+    <ul class="ul_tab font14">
+        <li class="active">
+            <div class="hdtit">创业加盟</div>
+            <div class="border"></div>
+        </li>
+        <li>
+            <div class="hdtit">代理内训</div>
+            <div class="border"></div>
+        </li>
+        <li>
+            <div class="hdtit">活动展示</div>
+            <div class="border"></div>
+        </li>
+        <li>
+            <div class="hdtit">创业明星</div>
+            <div class="border"></div>
+        </li>
+    </ul>
+    <div class="main">
+        <div class="vedio">
+            <img src="../../image/vedio.png"/>
+        </div>
+        <div class="mulu">
+            <div class="mltit">目录</div>
+            <div class="mlcen">
+                <div class="lvlist active">
+                    <div>1、未来这八种人将变成困难户！</div>
+                    <div class="font12 cor9">2019-05-22</div>
+                </div>
+                <div class="lvlist">
+                    <div>1、未来这八种人将变成困难户！</div>
+                    <div class="font12 cor9">2019-05-22</div>
+                </div>
+                <div class="lvlist">
+                    <div>1、未来这八种人将变成困难户！</div>
+                    <div class="font12 cor9">2019-05-22</div>
+                </div>
+                <div class="lvlist">
+                    <div>1、未来这八种人将变成困难户！</div>
+                    <div class="font12 cor9">2019-05-22</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer fle">
+            <div class="shuru">
+						<textarea rows=1 cols=40 class="textword" placeholder="写点感想吧..." style=''
+                                  onfocus="window.activeobj=this;this.clock=setInterval(function(){activeobj.style.height=activeobj.scrollHeight+'px';},20);"
+                                  onblur="clearInterval(this.clock);"></textarea>
+            </div>
+            <div class="icodiv">
+                <div class="icon iconfont icon-pinglun"></div>
+                <div>162</div>
+            </div>
+            <div class="icodiv dianzan">
+                <div class="icon iconfont icon-zan1"></div>
+                <div>185</div>
+            </div>
+
+
+            <div class="fasong">发送</div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    $('.ul_tab').on('click', 'li', function () {
+        $('.ul_tab li').removeClass('active');
+        $(this).addClass('active');
+    })
+
+    /*点赞*/
+    var state1 = false;
+    $('.dianzan').click(function () {
+        state1 = !state1;
+        if (state1) {
+            $(this).find('.iconfont').removeClass('icon-zan1');
+            $(this).find('.iconfont').addClass('icon-zan');
+        } else {
+            $(this).find('.iconfont').addClass('icon-zan1');
+            $(this).find('.iconfont').removeClass('icon-zan');
+        }
+    })
+
+    /*输入内容时候*/
+    $('.textword').focus(function () {
+        $('.fasong').show();
+        $('.icodiv').hide();
+        $(this).css('width', '2.72rem');
+    })
+
+    $('.textword').blur(function () {
+        $('.fasong').hide();
+        $('.icodiv').show();
+    })
+</script>
+</html>

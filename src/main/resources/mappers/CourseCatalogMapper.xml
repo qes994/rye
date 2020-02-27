@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybaits.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.wandongli.rye.dao.CourseCatalogDao">
+    <resultMap id="CourseCatalogResult" type="courseCatalog">
+        <id property="id" column="id"></id>
+        <result property="courseId" column="course_id"></result>
+        <result property="catalog" column="catalog"></result>
+        <result property="duration" column="duration"></result>
+        <result property="statusNum" column="status_num"></result>
+        <result property="type" column="type" typeHandler="edu.wandongli.rye.typehandler.TypeHandler"></result>
+        <result property="videoUrl" column="video_url"></result>
+        <result property="createTime" column="create_time"></result>
+        <collection property="images" column="id"
+                    select="edu.wandongli.rye.dao.CourseImageDao.getListById"></collection>
+        <collection property="intros" column="id"
+                    select="edu.wandongli.rye.dao.CourseIntroDao.getListById"></collection>
+    </resultMap>
+    <select id="getListById" resultMap="CourseCatalogResult" parameterType="long">
+        select * from course_catalog where course_id=#{courseId}
+    </select>
+</mapper>

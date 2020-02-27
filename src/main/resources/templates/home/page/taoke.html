@@ -1,0 +1,445 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../css/swiper.min.css"/>
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        .banner {
+            text-align: center;
+            background: #ffffff;
+            padding: 0 0 0.05rem 0;
+        }
+
+        .banner img {
+            width: 3.47rem;
+            height: 1.58rem;
+        }
+
+        .swiper-pagination-bullet {
+            border: 1px solid #FFFFFF;
+            background: none;
+            opacity: 1;
+            width: 0.05rem;
+            height: 0.05rem;
+        }
+
+        .swiper-pagination-bullet-active {
+            background: #ffffff;
+        }
+
+        /*精品课程*/
+        .jingpin, .zhuanji {
+            padding: 0 0.14rem;
+            background: #ffffff;
+            margin-top: 0.1rem;
+        }
+
+        .title {
+            padding: 0.2rem 0;
+            line-height: 0.1rem;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .titlf {
+            font-size: 0.18rem;
+            color: #333333;
+            font-weight: bold;
+            padding-left: 0.1rem;
+            border-left: 0.03rem solid #01C475;
+        }
+
+        .titrg span.iconfont {
+            font-size: 0.12rem;
+        }
+
+
+        .spimg {
+            width: 1.06rem;
+            height: 1.57rem;
+            position: relative;
+        }
+
+        .spimg > img {
+            width: 1.06rem;
+            height: 1.57rem;
+        }
+
+        .xuan {
+            width: 0.57rem;
+            height: 0.57rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .xuan img {
+            width: 0.57rem;
+            height: 0.57rem;
+            border-radius: 0.05rem;
+        }
+
+        .splist {
+            padding: 0.15rem 0;
+            border-bottom: 1px solid #EEEEEE;
+        }
+
+        .splist:last-child {
+            border-bottom: none;
+        }
+
+        .spright {
+            width: 2.2rem;
+            position: relative;
+            margin-left: 0.14rem;
+        }
+
+        .spright h4 {
+            font-size: 0.16rem;
+            line-height: 0.21rem;
+        }
+
+        .mui-h4, h4 {
+            font-size: 0.16rem;
+            line-height: 0.21rem;
+        }
+
+        .biaoqian {
+            margin-top: 0.1rem;
+        }
+
+        .biaoqian span {
+            padding: 0 0.08rem;
+            background: #EFEFF3;
+            border-radius: 0.01rem;
+            display: inline-block;
+            font-size: 0.12rem;
+            color: #666666;
+            margin-bottom: 0.1rem;
+            margin-right: 0.1rem;
+        }
+
+        .number span.iconfont {
+            color: #FFAA01;
+            font-size: 0.13rem;
+        }
+
+        .price {
+            font-size: 0.18rem;
+            color: #FF366C;
+            font-weight: bold;
+        }
+
+        .study {
+            width: 100%;
+            position: absolute;
+            bottom: 0.05rem;
+        }
+
+        /*专辑*/
+        .zjlf, .zjlf img {
+            width: 3.47rem;
+            height: 1.96rem;
+        }
+
+        .zjrg {
+            margin-top: 0.15rem;
+        }
+
+        .zjrg h4 {
+            color: #666666;
+        }
+
+        .zjrg .study {
+            position: relative;
+            margin-top: 0.1rem;
+        }
+
+        .sptit {
+            font-size: 0.16rem;
+            color: #333333;
+            font-weight: bold;
+            margin-bottom: 0.15rem;
+        }
+
+        /*全部跳过*/
+        .fix {
+            width: 100%;
+            height: 100%;
+            background: url(../../image/tk-fix1.png) no-repeat;
+            background-size: 100% 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 9663;
+        }
+
+        .tiaoguo {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            bottom: 0.26rem;
+        }
+
+        .tiaoguo img {
+            width: 1.08rem;
+            height: 0.41rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar2 mui-bar-nav">
+        <h1 class="mui-title">麦田淘课</h1>
+        <span class="mui-pull-right">已购课程</span>
+    </header>
+    <div class="main">
+        <div class="banner">
+            <div class="swiper-container banner">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="../../image/tkban.png"></div>
+                    <div class="swiper-slide"><img src="../../image/tkban.png"></div>
+                    <div class="swiper-slide"><img src="../../image/tkban.png"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+            <div class="topfloat clearfloat">
+                <div class="topbtn fl">
+                    <span class="icon iconfont iconfanhui-"></span>
+                </div>
+                <div class="topbtn fr fenxiang">
+                    <span class="icon iconfont iconxingzhuang31"></span>
+                </div>
+            </div>
+        </div>
+        <div class="jingpin">
+            <div class="title fle fle_b">
+                <div class="titlf">精品课程</div>
+                <div class="titrg font12 cor9 fle fle_a_c">
+                    <span>更多</span>
+                    <span class="icon iconfont icon-gengduo"></span>
+                </div>
+            </div>
+
+            <div class="spcen">
+                <div class="splist fle">
+                    <div class="spimg">
+                        <img src="../../image/sp1.png"/>
+                        <!--<div class="xuan">
+                            <img src="../../image/biao3.png" />
+                        </div>-->
+                    </div>
+                    <div class="spright">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart5">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="splist fle">
+                    <div class="spimg">
+                        <img src="../../image/sp1.png"/>
+                    </div>
+                    <div class="spright">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart5">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="splist fle">
+                    <div class="spimg">
+                        <img src="../../image/sp1.png"/>
+                    </div>
+                    <div class="spright">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart5">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--专辑-->
+        <div class="zhuanji">
+            <div class="title fle fle_b">
+                <div class="titlf">专辑</div>
+                <div class="titrg font12 cor9 fle fle_a_c">
+                    <span>更多</span>
+                    <span class="icon iconfont icon-gengduo"></span>
+                </div>
+            </div>
+
+            <div class="spcen">
+                <div class="splist">
+                    <div class="sptit">美丽时尚</div>
+                    <div class="zjlf">
+                        <img src="../../image/sp3.png"/>
+                        <div class="xuan">
+                            <img src="../../image/biao3.png"/>
+                        </div>
+                    </div>
+                    <div class="zjrg">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart10">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="splist">
+                    <div class="sptit">上古小儿推拿</div>
+                    <div class="zjlf">
+                        <img src="../../image/sp3.png"/>
+                        <div class="xuan">
+                            <img src="../../image/biao3.png"/>
+                        </div>
+                    </div>
+                    <div class="zjrg">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart10">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="splist">
+                    <div class="sptit">健康养生</div>
+                    <div class="zjlf">
+                        <img src="../../image/sp3.png"/>
+                        <div class="xuan">
+                            <img src="../../image/biao3.png"/>
+                        </div>
+                    </div>
+                    <div class="zjrg">
+                        <h4 class="w_s">生而为人，直面焦虑</h4>
+                        <div class="font14 cor9 w_s mart10">当自己越想积极乐观的时候怎么去化解心情最为中药</div>
+                        <div class="biaoqian">
+                            <span>励志</span>
+                            <span>态度</span>
+                            <span>目标</span>
+                            <span>体验</span>
+                            <span>兴趣</span>
+                            <span>教育</span>
+                        </div>
+                        <div class="study fle fle_b">
+                            <div class="number">
+                                <span class="icon iconfont icon-icon-test"></span>
+                                <span class="font12 cor3">3.5万人学习</span>
+                            </div>
+                            <div class="price">￥199.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--全部跳过-->
+    <div class="fix">
+        <div class="tiaoguo">
+            <img src="../../image/tiaoguo.png"/>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script type="text/javascript" src="../../js/swiper.min.js"></script>
+<script>
+    /*banner*/
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        autoplay: {
+            disableOnInteraction: false,
+        },
+    });
+    /*全部跳过*/
+    $('.tiaoguo').click(function () {
+        $('.fix').hide();
+        $('body').css('overflow-y', 'scroll');
+    })
+</script>
+</html>

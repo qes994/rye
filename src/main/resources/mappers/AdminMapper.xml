@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybaits.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.wandongli.rye.dao.AdminDao">
+    <resultMap id="AdminResult" type="admin">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="phone" column="phone"></result>
+        <result property="password" column="password"></result>
+        <result property="status" column="status"
+                typeHandler="edu.wandongli.rye.typehandler.StatusTypeHandler"></result>
+        <result property="createTime" column="create_time"></result>
+    </resultMap>
+    <select id="findAdminById" resultMap="AdminResult" parameterType="long">
+        select * from admin where id=#{id}
+    </select>
+</mapper>

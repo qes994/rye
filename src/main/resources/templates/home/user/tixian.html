@@ -1,0 +1,237 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        .main {
+            margin-top: 0.59rem;
+        }
+
+        .txtop {
+            width: 3.47rem;
+            background: #ffffff;
+            border-radius: 0.04rem;
+            margin: 0 auto;
+        }
+
+        .zftit {
+            text-align: center;
+            padding: 0.25rem 0 0.4rem 0;
+        }
+
+        .zftit img {
+            width: 0.45rem;
+            height: 0.45rem;
+            margin-bottom: 0.05rem;
+        }
+
+        .bmcen {
+            width: 3.17rem;
+            margin: 0 auto;
+            padding-bottom: 0.15rem;
+        }
+
+        .bmlist input {
+            width: 3.17rem;
+            height: 0.44rem;
+            background: #FAFAFE;
+            border-radius: 0.04rem;
+            padding-left: 0.1rem;
+            color: #111111;
+            font-size: 0.16rem;
+            font-weight: bold;
+            border: none;
+            margin-top: 0.07rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .txbot {
+            width: 3.47rem;
+            margin: 0 auto;
+            margin-top: 0.15rem;
+            background: #ffffff;
+            padding: 0.1rem 0;
+            border-radius: 0.06rem;
+        }
+
+        .txbot h4 {
+            padding-left: 0.1rem;
+            margin: 0.05rem 0;
+            font-size: 0.16rem;
+            color: #333333;
+            border-left: 0.03rem solid #01C475;
+        }
+
+        .int {
+            border-bottom: 1px solid #EEEEEE;
+            padding: 0.12rem 0.1rem 0.1rem 0.1rem;
+        }
+
+        .int span {
+            position: relative;
+            top: 0.02rem;
+        }
+
+        .int input {
+            padding: 0;
+            height: auto;
+            border: none;
+            margin-bottom: 0;
+            margin-left: 0.1rem;
+            font-size: 0.23rem;
+            font-weight: bold;
+        }
+
+        .jiner {
+            text-align: right;
+            padding-top: 0.1rem;
+            padding-right: 0.14rem;
+        }
+
+        .jiner div {
+            display: inline-block;
+        }
+
+        .blue {
+            color: #01C475;
+            margin-left: 0.15rem;
+        }
+
+        .tixian {
+            width: 3.47rem;
+            height: 0.44rem;
+            line-height: 0.44rem;
+            text-align: center;
+            background: linear-gradient(-56deg, rgba(10, 209, 128, 1), rgba(1, 196, 117, 1));
+            box-shadow: 0px 4px 5px 0px rgba(1, 196, 117, 0.22);
+            border-radius: 0.05rem;
+            margin: 0 auto;
+            margin-top: 0.55rem;
+            font-weight: bold;
+            color: #ffffff;
+            font-size: 0.18rem;
+        }
+
+        /*输入密码弹窗*/
+        .tanchuang {
+            width: 3.47rem;
+            background: #ffffff;
+            border-radius: 0.05rem;
+            padding: 0.25rem 0.56rem;
+            text-align: center;
+            display: none;
+        }
+
+        .tanchuang h4 {
+            font-size: 0.18rem;
+            color: #333333;
+            font-weight: bold;
+            margin-bottom: 0.1rem;
+        }
+
+        .tanchuang input {
+            background: #FAFAFE;
+            border: none;
+            font-size: 0.3rem;
+            text-align: center;
+        }
+
+        .mima {
+            margin: 0.25rem 0;
+        }
+
+        .queding {
+            width: 0.93rem;
+            height: 0.34rem;
+            background: linear-gradient(-56deg, rgba(10, 209, 128, 1), rgba(1, 196, 117, 1));
+            box-shadow: 0px 4px 5px 0px rgba(1, 196, 117, 0.22);
+            border-radius: 0.17rem;
+            margin: 0 auto;
+            line-height: 0.34rem;
+            text-align: center;
+            color: #ffffff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav">
+        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+        <h1 class="mui-title">提现</h1>
+    </header>
+    <div class="main">
+        <div class="txtop">
+            <div class="zftit">
+                <img src="../../image/zh2.png"/>
+                <div class="font12 cor9">为保障您的资金安全，请输入账户本人的支付宝</div>
+            </div>
+
+            <div class="bmcen cor9">
+                <div class="bmlist">
+                    <div>姓名</div>
+                    <input type="text" placeholder="请输入您的支付宝名称"/>
+                </div>
+                <div class="bmlist">
+                    <div>支付宝帐号</div>
+                    <input type="text" placeholder="请输入您的支付宝帐号"/>
+                </div>
+            </div>
+        </div>
+
+        <div class="txbot">
+            <h4>提现金额</h4>
+            <div class="int fle fle_a_c">
+                <span>￥</span>
+                <input type="text" placeholder="请输入提现金额" value="" id="prinum"/>
+            </div>
+
+            <div class="jiner cor9">
+                <div>可提现<span class="price">0</span>元</div>
+                <div class="blue">全部提现</div>
+            </div>
+        </div>
+
+        <div class="tixian">提现</div>
+    </div>
+</div>
+
+<div class="bg_rgba"></div>
+<div class="tanchuang tc">
+    <h4>请输入提现密码</h4>
+    <div class="font12 cor9">提现密码为6位数字</div>
+    <div class="mima">
+        <input type="password"/>
+    </div>
+    <div class="queding">确定</div>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    /*输入金额*/
+    $('#prinum').keyup(function () {
+        var hl = $(this).val();
+        $('.price').html(hl);
+    })
+
+    /*点击提现*/
+    $('.tixian').click(function () {
+        $('.bg_rgba').show();
+        $('.tanchuang').show();
+    })
+    /*关闭弹窗*/
+    $('.queding,.bg_rgba').click(function () {
+        $('.bg_rgba').hide();
+        $('.tanchuang').hide();
+    })
+
+</script>
+</html>

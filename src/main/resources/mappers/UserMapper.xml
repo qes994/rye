@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybaits.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.wandongli.rye.dao.UserDao">
+    <resultMap id="UserResult" type="user">
+        <id property="id" column="id"></id>
+        <result property="address" column="address"></result>
+        <result property="billRecordId" column="bill_record_id"></result>
+        <result property="userName" column="user_name"></result>
+        <result property="password" column="password"></result>
+        <result property="invitationCode" column="invitation_code"></result>
+        <result property="phone" column="phone"></result>
+        <result property="alipayName" column="alipay_name"></result>
+        <result property="alipayAccount" column="alipay_account"></result>
+        <result property="balance" column="balance"></result>
+        <result property="balance" column="balance"></result>
+        <result property="head" column="head"></result>
+        <result property="name" column="name"></result>
+        <result property="status" column="status"
+                typeHandler="edu.wandongli.rye.typehandler.StatusTypeHandler"></result>
+        <result property="sex" column="sex"></result>
+        <result property="birthday" column="birthday"></result>
+        <result property="pinless" column="pinless"></result>
+        <result property="withdrawPassword" column="withdraw_password"></result>
+        <result property="createTime" column="create_time"></result>
+        <collection property="userVip" column="id"
+                    select="edu.wandongli.rye.dao.UserVipDao.findUserVipByUserId"></collection>
+    </resultMap>
+    <select id="findUserByUserId" resultMap="UserResult" parameterType="long">
+        select * from user where id=#{id}
+    </select>
+    <select id="findUsersByCreateTime" resultMap="UserResult">
+        select count(id),month(create_time) from user where year(create_time) ='2020' group by month(create_time)
+    </select>
+</mapper>

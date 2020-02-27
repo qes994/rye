@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        body {
+            background: #ffffff;
+        }
+
+        .headtitle {
+            width: 2.5rem;
+            height: 0.34rem;
+            background: #F7F7F7;
+            border-radius: 0.17rem;
+            padding-left: 0.1rem;
+        }
+
+        .headtitle span.iconfont {
+            color: #AAAAAA;
+            font-size: 0.14rem;
+        }
+
+        .headtitle input {
+            margin-bottom: 0;
+            padding: 0 0 0 0.1rem;
+            height: 0.21rem;
+            line-height: 0.21rem;
+            background: none;
+            border: none;
+            font-size: 0.14rem;
+        }
+
+        .saixuan {
+            color: #ffffff;
+        }
+
+        /*tab*/
+        .ul_tab {
+            width: 100%;
+            padding: 0.15rem 0 0 0;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #DDDDDD;
+        }
+
+        .ul_tab li {
+            width: 33.33333333%;
+            text-align: center;
+            color: #666666;
+            float: left;
+        }
+
+        .ul_tab li.active {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        .border {
+            width: 0.21rem;
+            height: 0.01rem;
+            background: #01C475;
+            margin: 0 auto;
+            margin-top: 0.1rem;
+            display: none;
+        }
+
+        .ul_tab li.active .border {
+            display: block;
+        }
+
+        /*大家都在搜*/
+        .sortit {
+            padding: 0.12rem 0.14rem;
+        }
+
+        .sousuo {
+            padding: 0 0.14rem;
+        }
+
+        .sousuo span {
+            padding: 0 0.2rem;
+            line-height: 0.28rem;
+            background: #F7F7F7;
+            border-radius: 0.02rem;
+            display: inline-block;
+            margin-right: 0.1rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .sortit span.iconfont {
+            font-size: 0.16rem;
+        }
+
+        .borbot {
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        .rtlist {
+            padding: 0.12rem 0.14rem;
+            border-bottom: 1px solid #F2F2F2;
+        }
+
+        .rtlist span.iconfont {
+            color: #AAAAAA;
+            font-size: 0.14rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav fle fle_a_c fle_b">
+        <div class="mui-action-back fle fle_a_c">
+            <span class="mui-icon mui-icon-left-nav"></span>
+            <span>返回</span>
+        </div>
+        <div class="fle fle_a_c headtitle">
+            <span class="icon iconfont icon-sousuo"></span>
+            <input type="text" placeholder="请输入关键字搜索"/>
+        </div>
+        <div class="fle fle_a_c xuanzebtn">
+            <span class="saixuan">搜索</span>
+        </div>
+    </header>
+    <div class="bg_rgba"></div>
+
+    <div class="main">
+        <ul class="ul_tab clearfloat">
+            <li class="active">
+                <div class="hdtit">健谈智慧</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">家庭教育</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">已购淘课</div>
+                <div class="border"></div>
+            </li>
+        </ul>
+        <div class="sortcen">
+            <div class="cor9 sortit">大家都在搜</div>
+            <div class="sousuo">
+                <span>法律</span>
+                <span>中国</span>
+                <span>经济</span>
+                <span>学会读书</span>
+                <span>说话技巧</span>
+                <span>智慧</span>
+                <span>做人准则</span>
+            </div>
+            <div class="cor9 fle fle_b sortit borbot">
+                <span>历史记录</span>
+                <span class="icon iconfont icon-shanchu"></span>
+            </div>
+            <div class="report">
+                <div class="rtlist">
+                    <span class="icon iconfont icon-lishijilu"></span>
+                    <span>情绪</span>
+                </div>
+                <div class="rtlist">
+                    <span class="icon iconfont icon-lishijilu"></span>
+                    <span>情绪</span>
+                </div>
+                <div class="rtlist">
+                    <span class="icon iconfont icon-lishijilu"></span>
+                    <span>情绪</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    $('.ul_tab').on('click', 'li', function () {
+        $('.ul_tab li').removeClass('active');
+        $(this).addClass('active');
+    })
+
+</script>
+</html>

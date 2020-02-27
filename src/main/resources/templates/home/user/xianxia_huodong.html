@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        .ul_tab {
+            width: 100%;
+            padding: 0.15rem 0 0 0;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #DDDDDD;
+        }
+
+        .ul_tab li {
+            width: 50%;
+            text-align: center;
+            color: #666666;
+            float: left;
+        }
+
+        .ul_tab li.active {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        .border {
+            width: 0.17rem;
+            height: 0.01rem;
+            background: #01C475;
+            margin: 0 auto;
+            margin-top: 0.1rem;
+            display: none;
+        }
+
+        .ul_tab li.active .border {
+            display: block;
+        }
+
+        .ulist {
+            width: 3.47rem;
+            height: 2.1rem;
+            background: #ffffff;
+            border-radius: 0.03rem;
+            margin: 0.15rem auto;
+        }
+
+        .litimg img, .ltimg {
+            width: 3.47rem;
+            height: 1.56rem;
+        }
+
+        .litcen {
+            padding: 0 0.1rem;
+            padding-top: 0.1rem;
+        }
+
+        .litcen span.sp1 {
+            width: 1.5rem;
+            font-size: 0.16rem;
+            color: #111111;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav">
+        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+        <h1 class="mui-title">线下活动</h1>
+    </header>
+    <div class="main">
+        <ul class="ul_tab clearfloat">
+            <li class="active">
+                <div class="hdtit">最新活动</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">历史活动</div>
+                <div class="border"></div>
+            </li>
+        </ul>
+        <div class="ul_cen">
+            <div class="ulist">
+                <div class="litimg">
+                    <img src="../../image/hd1.png"/>
+                </div>
+                <div class="litcen fle fle_b">
+                    <span class="sp1 w_s">麦田线下课程火爆进行中麦田线下课程火爆进行中</span>
+                    <span class="cor9 time">2019-06-22</span>
+                </div>
+            </div>
+
+            <div class="ulist">
+                <div class="litimg">
+                    <img src="../../image/hd2.png"/>
+                </div>
+                <div class="litcen fle fle_b">
+                    <span class="sp1 w_s">麦田线下课程火爆...</span>
+                    <span class="cor9 time">2019-06-22</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    $('.ul_tab').on('click', 'li', function () {
+        $('.ul_tab li').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</html>

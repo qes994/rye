@@ -1,0 +1,161 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link href="../../css/mui.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="../../icon/iconfont.css"/>
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <style>
+        .ul_tab {
+            width: 100%;
+            padding: 0.15rem 0 0 0;
+            background: #ffffff;
+            border-bottom: 0.01rem solid #DDDDDD;
+        }
+
+        .ul_tab li {
+            width: 50%;
+            text-align: center;
+            color: #666666;
+            float: left;
+        }
+
+        .ul_tab li.active {
+            color: #01C475;
+            font-weight: bold;
+        }
+
+        .border {
+            width: 0.17rem;
+            height: 0.01rem;
+            background: #01C475;
+            margin: 0 auto;
+            margin-top: 0.1rem;
+            display: none;
+        }
+
+        .ul_tab li.active .border {
+            display: block;
+        }
+
+        .time {
+            width: 0.83rem;
+            height: 0.16rem;
+            line-height: 0.16rem;
+            text-align: center;
+            line-height: 0.16rem;
+            border-radius: 0.01rem;
+            background: #C4C4C4;
+            color: #FFFFFF;
+            font-size: 0.12rem;
+            margin: 0.14rem auto;
+        }
+
+        .title {
+            font-size: 0.16rem;
+            color: #111111;
+            padding: 0.15rem 0 0.05rem 0;
+            position: relative;
+        }
+
+        .message {
+            width: 3.47rem;
+            background: #ffffff;
+            margin: 0 auto;
+            padding: 0 0.15rem;
+            border-radius: 0.03rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .chakan {
+            padding: 0.08rem 0 0.12rem 0;
+            border-top: 1px solid #EEEEEE;
+            margin-top: 0.08rem;
+        }
+
+        .chakan span:nth-child(1) {
+            color: #01C475;
+        }
+
+        .chakan span.iconfont {
+            font-size: 0.08rem;
+            color: #999999;
+        }
+
+        .dian {
+            width: 0.04rem;
+            height: 0.04rem;
+            background: #FF0000;
+            border-radius: 0.04rem;
+            display: inline-block;
+            position: absolute;
+            top: 0.25rem;
+            left: -0.08rem;
+        }
+    </style>
+</head>
+<body>
+<div class="app">
+    <!-- 主页面标题 -->
+    <header class="header mui-bar mui-bar1 mui-bar-nav">
+        <span class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></span>
+        <h1 class="mui-title">系统消息</h1>
+    </header>
+    <div class="main">
+        <ul class="ul_tab clearfloat">
+            <li class="active">
+                <div class="hdtit">课程更新</div>
+                <div class="border"></div>
+            </li>
+            <li>
+                <div class="hdtit">我的消息</div>
+                <div class="border"></div>
+            </li>
+        </ul>
+        <div class="ul_cen">
+            <div class="time">2019-06-20</div>
+            <div class="message">
+                <div class="title"><span class="dian"></span>管理到底管的是什么？</div>
+                <div class="messcen cor9">欲望，是人生最大的驱动力，而作为管理者需要...</div>
+                <div class="chakan fle fle_b">
+                    <span>查看课程</span>
+                    <span class="icon iconfont icon-gengduo"></span>
+                </div>
+            </div>
+
+            <div class="message">
+                <div class="title"><span class="dian"></span>管理到底管的是什么？</div>
+                <div class="messcen cor9">欲望，是人生最大的驱动力，而作为管理者需要...</div>
+                <div class="chakan fle fle_b">
+                    <span>查看课程</span>
+                    <span class="icon iconfont icon-gengduo"></span>
+                </div>
+            </div>
+
+            <div class="time">2019-06-20</div>
+            <div class="message">
+                <div class="title">管理到底管的是什么？</div>
+                <div class="messcen cor9">欲望，是人生最大的驱动力，而作为管理者需要...</div>
+                <div class="chakan fle fle_b">
+                    <span>查看课程</span>
+                    <span class="icon iconfont icon-gengduo"></span>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="../../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../../js/common.js"></script>
+<script>
+    $('.ul_tab').on('click', 'li', function () {
+        $('.ul_tab li').removeClass('active');
+        $(this).addClass('active');
+    })
+</script>
+</html>
